@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 import sys
-# new follows
+# new follows ****************************************************
 import random
 from platforms import Platforms
 def init():
@@ -10,7 +10,7 @@ def init():
             plat = Platforms((random.randint(5, (width - 50) // 10)
                 * 10, 120 * i), 'images/grassHalf.png', 70, 40)
             platforms.add(plat)
-# new above
+# new above *******************************************************
 pygame.init()
 screen_info = pygame.display.Info()
 # set the width and height to the size of the screen
@@ -20,11 +20,12 @@ clock = pygame.time.Clock()
 color = (255, 224, 179)
 sprite_list = pygame.sprite.Group()
 platforms = pygame.sprite.Group()
+
 def main():
     game_over = False
-    # new follows
+    # new follows *****************************
     init()
-    # new above
+    # new above   *****************************
     while True:
         clock.tick(60)
         for event in pygame.event.get():
